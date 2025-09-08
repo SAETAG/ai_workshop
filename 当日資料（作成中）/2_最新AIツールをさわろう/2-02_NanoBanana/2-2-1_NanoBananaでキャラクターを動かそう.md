@@ -46,9 +46,9 @@ Geminiと対話してオリジナルキャラクターを生み出し、「お�
 ### 💡 ポイント：会話で微調整！
 「もっと釣り目にして」「頬の赤い色を消して」のように、会話でキャラクターを理想に近づけましょう。
 
-▽調整後、出来上がった画像（例）。ほぼテイストを変えずに指示したかしょだけマイナーチェンジ出来る
+   ▽調整後、出来上がった画像（例）。ほぼテイストを変えずに指示したかしょだけマイナーチェンジ出来る
 
-<img width="187" height="179" alt="image" src="https://github.com/user-attachments/assets/3721c6de-b873-4094-82d2-831b29156a66" />
+   <img width="187" height="179" alt="image" src="https://github.com/user-attachments/assets/3721c6de-b873-4094-82d2-831b29156a66" />
   
 ---
 
