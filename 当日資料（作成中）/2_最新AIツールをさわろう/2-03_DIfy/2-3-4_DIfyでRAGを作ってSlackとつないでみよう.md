@@ -109,7 +109,7 @@ Chunk-09: 「枝吉神陽」に関する記述です。「藩政改革」とい�
 
 このように、Difyは単なる文字列検索ではなく、**ベクトル検索（意味をベクトル化して類似度を測る）**を用いることで、「総理大臣」という文字が含まれていないにもかかわらず、その概念や役割に関連する人物の情報を正確に引き出しているのです。
 
-３、スラックに接続しよう！
+３、dify上でナレッジを使ったチャットボットを作る
 
 ①Dify上でチャットボットを作成する
 アプリを作成→最初から作成→チャットボット→アプリ名を入力→「作成」を押す
@@ -125,6 +125,39 @@ Chunk-09: 「枝吉神陽」に関する記述です。「藩政改革」とい�
 ③参照する知識が選択できるので「佐賀出身の偉人」を選択し、「追加」
 
 <img width="208" height="109" alt="image" src="https://github.com/user-attachments/assets/b83df8e8-7736-4a8c-9392-e4e995028b0c" />
+
+４，スラックボットプラグインをインストールする
+
+①Difyマーケットプレイスに接続する（https://marketplace.dify.ai/）と、以下の画面が表示されるので、検索バーに「Slack Bot」と入力し、Slack Botをクリック。
+
+<img width="656" height="373" alt="image" src="https://github.com/user-attachments/assets/c3cc01f6-04b7-4f07-b5a6-d9afda577c2e" />
+
+②「Install」をクリック
+
+<img width="620" height="294" alt="image" src="https://github.com/user-attachments/assets/fa742279-6151-4b69-9748-5966af2c342b" />
+
+⑥もう一度インストールを押す画面が表示されるのでそれを押すと、下記のようにインストール表示成功画面が出る。
+
+<img width="290" height="173" alt="image" src="https://github.com/user-attachments/assets/ccb8bafa-c698-44cf-8808-33d98cb61661" />
+
+Dify画面右上の「プラグイン」を押して、Slack　Botを選択して押す
+
+<img width="641" height="224" alt="image" src="https://github.com/user-attachments/assets/962da02e-5d94-4b6f-9aae-2200311f23d8" />
+
+右側に画面が表示されるので、「エンドポイント」の「＋」マークを押す
+
+<img width="212" height="117" alt="image" src="https://github.com/user-attachments/assets/5f5217de-de7e-4fd1-a6f4-6199ad7fd49f" />
+
+Bot TokenをSlack側で発行する
+
+
+
+
+
+
+
+
+
 
 
 
