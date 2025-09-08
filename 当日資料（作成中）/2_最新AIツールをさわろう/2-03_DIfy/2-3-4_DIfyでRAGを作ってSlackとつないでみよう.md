@@ -150,6 +150,77 @@ Dify画面右上の「プラグイン」を押して、Slack　Botを選択し�
 
 Bot TokenをSlack側で発行する
 
+Slack API: Your Apps
+ にアクセス
+Slackアカウントでログインしてる必要あり
+
+真ん中の 「Create New App」 をクリック
+
+<img width="1105" height="478" alt="image" src="https://github.com/user-attachments/assets/e0db8f53-06b0-478d-8060-71dcc87d405e" />
+
+ポップアップが出たら
+
+「From scratch」 を選ぶ（ゼロから作成）
+
+App Name：わかりやすい名前（例：佐賀偉人Bot）
+
+Pick a workspace to develop your app in：
+Botを導入したいSlackワークスペースを選ぶ
+<img width="400" height="389" alt="image" src="https://github.com/user-attachments/assets/24264515-6f29-4008-ad93-1ac519f559c2" />
+
+Create App を押すと、アプリが作成される
+
+アプリ管理メニューの左側のバーに「OAuth ＆ Permissons」が表示されるので、押す
+<img width="271" height="522" alt="image" src="https://github.com/user-attachments/assets/5101d004-2dfd-428d-a933-63f8fc2adc86" />
+
+Scopes→Add an OAuth Scopeを押す
+<img width="529" height="500" alt="image" src="https://github.com/user-attachments/assets/15c97fd7-120a-4992-92dc-a89b353a8647" />
+
+以下の二つを選択し、追加する。
+app_mentions:read
+　→ Slackで @佐賀偉人Bot と呼ばれたときに反応できる
+chat:write
+　→ BotがSlackにメッセージを返せる
+<img width="457" height="209" alt="image" src="https://github.com/user-attachments/assets/685c16d0-5ea3-494d-9cec-8cedf56926d8" />
+
+追加されると以下のように表示される
+<img width="500" height="326" alt="image" src="https://github.com/user-attachments/assets/485ad05e-e395-4ffb-ad06-81b2d5b7f10b" />
+
+
+次に、左バーの「App Home」を選択する
+<img width="752" height="523" alt="image" src="https://github.com/user-attachments/assets/a4dd99d2-ad3a-462a-af1c-a3e6285984c2" />
+
+Your App’s Presence in Slack→App Display Name→Editを押す
+<img width="514" height="289" alt="image" src="https://github.com/user-attachments/assets/fa11c5d3-cc47-4847-a901-2251a813889c" />
+
+Display Name (Bot Name)
+→ Slackに表示される名前（自由につけてOK）
+例：佐賀偉人Bot
+
+Default username
+→ Slackで @ で呼び出すときの名前（小文字・英数字のみ）
+例：sagaijinbot
+を入れて「Add」を押す
+<img width="407" height="392" alt="image" src="https://github.com/user-attachments/assets/79d618ac-70dd-4ea3-8cff-7797b93da7c5" />
+
+再度「OAuth & Permissions」に戻る。
+<img width="856" height="530" alt="image" src="https://github.com/user-attachments/assets/c0d9906d-1306-409a-bee2-4119811343e2" />
+
+「OAuth TOkens」→「Install to {ワークスペース名}」を押す
+<img width="837" height="539" alt="image" src="https://github.com/user-attachments/assets/fbefabb7-8fea-4db8-a906-601a67172731" />
+
+下記のような画面が出てくるので「許可する」を押す
+<img width="947" height="419" alt="image" src="https://github.com/user-attachments/assets/f2f8afc1-1646-4bd1-8a6c-d0b4d92b9b78" />
+
+OAuth Tokensの「Bot User OAuth Token」をコピーする
+<img width="808" height="514" alt="image" src="https://github.com/user-attachments/assets/da86261d-dee6-48eb-b35a-29be33496327" />
+
+
+
+
+
+
+
 
 
 
