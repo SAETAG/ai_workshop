@@ -34,7 +34,7 @@
 3. 記入欄に生成したい画像のイメージをテキストで入力
    - 例：「動物、地球、楽しい」
 4. 入力後、左下の→を実行
-image.png
+<img width="1657" height="1045" alt="image" src="https://github.com/user-attachments/assets/460d41c6-9b87-4bfd-81b7-c317c041a4df" />
 
 ### Step 3: 画像をダウンロード
 1. 生成された画像をクリック
