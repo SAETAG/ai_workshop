@@ -115,13 +115,15 @@
 
 4. **プロバイダーを選択**
    - 使用したいプロバイダーを「インストール」（無料枠であればGemini推奨）
-   - <img width="1567" height="653" alt="image" src="https://github.com/user-attachments/assets/62e83d62-743b-4a4e-b8ee-c76be3f4056c" />
+    <img width="1567" height="653" alt="image" src="https://github.com/user-attachments/assets/62e83d62-743b-4a4e-b8ee-c76be3f4056c" />
+    
    - 「セットアップ」を押してAPI入力画面を開く
-   - <img width="587" height="117" alt="image" src="https://github.com/user-attachments/assets/055dd75d-b272-4a5a-95a8-b990af56ba76" />
+    <img width="587" height="117" alt="image" src="https://github.com/user-attachments/assets/055dd75d-b272-4a5a-95a8-b990af56ba76" />
 
 5. **APIキーを入力**
    - 取得したAPIキーを入力して保存
-   - <img width="494" height="395" alt="image" src="https://github.com/user-attachments/assets/8d3b057a-8865-49d5-adc2-c72e83d9d2fa" />
+    <img width="494" height="395" alt="image" src="https://github.com/user-attachments/assets/8d3b057a-8865-49d5-adc2-c72e83d9d2fa" />
+   
    - 無料枠でも設定が必要です
 
 6. **設定完了の確認**
