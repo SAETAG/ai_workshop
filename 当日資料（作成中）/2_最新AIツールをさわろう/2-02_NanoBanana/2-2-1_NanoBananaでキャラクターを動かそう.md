@@ -36,7 +36,8 @@ Geminiと対話してオリジナルキャラクターを生み出し、「お�
     - シンプルで親しみやすい、海外のアメコミ風
     - 太めの線で、はっきりとしたデザイン
     ```
-    ↓生成された画像：
+    生成された画像
+    
     <img width="201" height="202" alt="image" src="https://github.com/user-attachments/assets/c6b084e1-e4ba-4b9f-a7b3-604329a23da0" />
     
 
