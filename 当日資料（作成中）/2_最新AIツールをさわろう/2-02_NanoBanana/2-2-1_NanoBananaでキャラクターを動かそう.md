@@ -36,9 +36,11 @@ Geminiと対話してオリジナルキャラクターを生み出し、「お�
     - シンプルで親しみやすい、海外のアメコミ風
     - 太めの線で、はっきりとしたデザイン
     ```
-    [生成された画像：<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/812f965d-2965-41d4-8e94-a86de680db99" />　　
+    ↓生成された画像：
+    <img width="201" height="202" alt="image" src="https://github.com/user-attachments/assets/c6b084e1-e4ba-4b9f-a7b3-604329a23da0" />
+    
 
-3.  Geminiが生成してくれた画像を調整
+4.  Geminiが生成してくれた画像を調整
 
 ### 💡 ポイント：会話で微調整！
 「もう少し目を大きくして」「バンダナの色を赤にして」のように、会話でキャラクターを理想に近づけましょう。
