@@ -118,6 +118,12 @@ Chunk-09: 「枝吉神陽」に関する記述です。「藩政改革」とい�
 
 <img width="626" height="343" alt="image" src="https://github.com/user-attachments/assets/85fcd517-7868-49cd-8227-24538a456378" />
 
+プロンプトに以下を入力
+
+あなたは佐賀県の歴史に詳しい案内人です。
+以下の「コンテキスト」に含まれる情報を最優先に使って質問に答えてください。
+コンテキストに情報がない場合は「このナレッジには情報がありません」と答えてください。
+
 ②「コンテキスト」の「追加」をおす
 
 <img width="639" height="458" alt="image" src="https://github.com/user-attachments/assets/d8514065-9194-4d65-973c-93dedf8c5e99" />
@@ -125,6 +131,10 @@ Chunk-09: 「枝吉神陽」に関する記述です。「藩政改革」とい�
 ③参照する知識が選択できるので「佐賀出身の偉人」を選択し、「追加」
 
 <img width="208" height="109" alt="image" src="https://github.com/user-attachments/assets/b83df8e8-7736-4a8c-9392-e4e995028b0c" />
+
+追加されたコンテキストの右側に円ぴーつマークがあらわれるので押すと「ナレッジベースの設定」がでてくるので、「検索設定」を「ハイブリッド検索」にする
+<img width="484" height="539" alt="image" src="https://github.com/user-attachments/assets/12c7644c-94be-4ab9-b4ce-897a11e31316" />
+
 
 ４，slack app側の設定をする
 
@@ -252,8 +262,39 @@ message.im（DM受信）を追加
 正しく選べていたら、「Save Changes」を押す
 <img width="654" height="491" alt="image" src="https://github.com/user-attachments/assets/ced076b1-eea0-49e3-ad43-04bcaf5a4ef5" />
 
-以下のエラーが出たら、追加で操作。
+以下のエラーが出るので（権限（Scopes）を変えたら必ず再インストールが必要）、以下を再度操作。
+
+＜エラー＞
 You’ve changed the permission scopes your app uses. Please reinstall your app for these changes to take effect (and if your app is listed in the Slack Marketplace, you’ll need to resubmit it as well).
+
+＜再度操作する内容＞
+Slack APIコンソール → OAuth & Permissions
+上部の Install to Workspace（または Reinstall to Workspace）→ 許可
+画面に出る Bot User OAuth Token（xoxb-…） をコピー
+もし前と違うトークンになったら、Dify側のBot Tokenも更新して保存
+
+
+スラック上でボットを呼び出す
+適当なチャンネル（例: #all-my）を開く
+/invite @佐賀偉人Bot を実行してBotをそのチャンネルに招待
+
+<img width="848" height="592" alt="image" src="https://github.com/user-attachments/assets/55e62f53-2b66-4e75-8195-88441edebeb7" />
+
+@佐賀偉人Botでメンションして、会話をしてみよう！
+
+<img width="559" height="389" alt="image" src="https://github.com/user-attachments/assets/ba7fb2f9-3f38-4c68-b167-51625e8f7b8d" />
+
+もし途中で躓いたら、GPTやGeminiに操作中の画面の画像を送って、わからないポイントを聞くと教えてくれるよ！
+
+
+
+
+
+
+
+
+
+
 
 
 
