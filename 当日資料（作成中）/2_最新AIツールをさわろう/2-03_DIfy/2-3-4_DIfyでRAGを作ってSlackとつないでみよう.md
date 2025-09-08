@@ -126,27 +126,7 @@ Chunk-09: 「枝吉神陽」に関する記述です。「藩政改革」とい�
 
 <img width="208" height="109" alt="image" src="https://github.com/user-attachments/assets/b83df8e8-7736-4a8c-9392-e4e995028b0c" />
 
-４，スラックボットプラグインをインストールする
-
-①Difyマーケットプレイスに接続する（https://marketplace.dify.ai/）と、以下の画面が表示されるので、検索バーに「Slack Bot」と入力し、Slack Botをクリック。
-
-<img width="656" height="373" alt="image" src="https://github.com/user-attachments/assets/c3cc01f6-04b7-4f07-b5a6-d9afda577c2e" />
-
-②「Install」をクリック
-
-<img width="620" height="294" alt="image" src="https://github.com/user-attachments/assets/fa742279-6151-4b69-9748-5966af2c342b" />
-
-⑥もう一度インストールを押す画面が表示されるのでそれを押すと、下記のようにインストール表示成功画面が出る。
-
-<img width="290" height="173" alt="image" src="https://github.com/user-attachments/assets/ccb8bafa-c698-44cf-8808-33d98cb61661" />
-
-Dify画面右上の「プラグイン」を押して、Slack　Botを選択して押す
-
-<img width="641" height="224" alt="image" src="https://github.com/user-attachments/assets/962da02e-5d94-4b6f-9aae-2200311f23d8" />
-
-右側に画面が表示されるので、「エンドポイント」の「＋」マークを押す
-
-<img width="212" height="117" alt="image" src="https://github.com/user-attachments/assets/5f5217de-de7e-4fd1-a6f4-6199ad7fd49f" />
+４，slack app側の設定をする
 
 Bot TokenをSlack側で発行する
 
@@ -212,8 +192,73 @@ Default username
 下記のような画面が出てくるので「許可する」を押す
 <img width="947" height="419" alt="image" src="https://github.com/user-attachments/assets/f2f8afc1-1646-4bd1-8a6c-d0b4d92b9b78" />
 
-OAuth Tokensの「Bot User OAuth Token」をコピーする
+OAuth Tokensの「Bot User OAuth Token」をコピーする（メモ帳などにはりつけて保存しておく）
 <img width="808" height="514" alt="image" src="https://github.com/user-attachments/assets/da86261d-dee6-48eb-b35a-29be33496327" />
+
+５、DIfyにスラックボットプラグインをインストールして
+
+①Difyマーケットプレイスに接続する（https://marketplace.dify.ai/）と、以下の画面が表示されるので、検索バーに「Slack Bot」と入力し、Slack Botをクリック。
+
+<img width="656" height="373" alt="image" src="https://github.com/user-attachments/assets/c3cc01f6-04b7-4f07-b5a6-d9afda577c2e" />
+
+②「Install」をクリック
+
+<img width="620" height="294" alt="image" src="https://github.com/user-attachments/assets/fa742279-6151-4b69-9748-5966af2c342b" />
+
+⑥もう一度インストールを押す画面が表示されるのでそれを押すと、下記のようにインストール表示成功画面が出る。
+
+<img width="290" height="173" alt="image" src="https://github.com/user-attachments/assets/ccb8bafa-c698-44cf-8808-33d98cb61661" />
+
+Dify画面右上の「プラグイン」を押して、Slack　Botを選択して押す
+
+<img width="641" height="224" alt="image" src="https://github.com/user-attachments/assets/962da02e-5d94-4b6f-9aae-2200311f23d8" />
+
+右側に画面が表示されるので、「エンドポイント」の「＋」マークを押す
+
+<img width="212" height="117" alt="image" src="https://github.com/user-attachments/assets/5f5217de-de7e-4fd1-a6f4-6199ad7fd49f" />
+
+
+エンドポイント名
+　→ わかりやすい名前をつける（自由）
+　例：佐賀偉人Bot
+
+Bot Token
+　→ Slackで「Install to Workspace」したときに発行された
+　　xoxb-... で始まる Bot User OAuth Token をコピペ
+
+アプリ
+　→ Difyで作った「佐賀偉人ナレッジ付きチャットボット」を選択
+
+「保存」ボタンを押す
+
+<img width="329" height="320" alt="image" src="https://github.com/user-attachments/assets/99c88e87-64de-409c-94d8-5712bc2963b0" />
+
+POST URLが発行されるので、https://以降をコピーする
+<img width="329" height="223" alt="image" src="https://github.com/user-attachments/assets/756afea6-1a82-4c3e-a85f-e928b1ceabbf" />
+
+Slack APIの管理画面に戻り、Event Subscriptions→Enable EventsをONにする
+<img width="1097" height="534" alt="image" src="https://github.com/user-attachments/assets/18ef1a79-69e3-483f-8f82-936b6e144140" />
+
+先ほどDify側でコピペしたPOST URLをはりつけて→Verifiedが表示されればOK
+<img width="704" height="443" alt="image" src="https://github.com/user-attachments/assets/192bb98e-1bad-44ff-a01e-8249b3d1496f" />
+
+下にある「Sabscribe to bot events」をクリック
+<img width="543" height="450" alt="image" src="https://github.com/user-attachments/assets/58a3f019-4412-4052-89d2-b52443dcea03" />
+
+Add Bot User Eventを押すと選択肢が表れるので、app_mention（@メンションされたとき）
+message.im（DM受信）を追加
+<img width="488" height="245" alt="image" src="https://github.com/user-attachments/assets/455d583a-174b-4bf0-bb94-3a862e1d839a" />
+
+正しく選べていたら、「Save Changes」を押す
+<img width="654" height="491" alt="image" src="https://github.com/user-attachments/assets/ced076b1-eea0-49e3-ad43-04bcaf5a4ef5" />
+
+以下のエラーが出たら、追加で操作。
+You’ve changed the permission scopes your app uses. Please reinstall your app for these changes to take effect (and if your app is listed in the Slack Marketplace, you’ll need to resubmit it as well).
+
+
+
+
+
 
 
 
