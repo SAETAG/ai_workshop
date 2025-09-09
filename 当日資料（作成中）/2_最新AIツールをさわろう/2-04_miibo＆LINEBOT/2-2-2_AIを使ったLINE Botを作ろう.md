@@ -45,9 +45,12 @@ miiboとLINEが連携することで、会話型AIが組み込まれたLINE Bot�
 2. 事前に作成した**プロバイダー**をクリック
 3. 事前に作成している**チャネル**をクリック
 
-（画像にも操作のクリックする順番を①②③と載せているので、参考にしてください）
+<img width="708" height="560" alt="image" src="https://github.com/user-attachments/assets/0f800f6d-32f7-4583-b46d-385599b332dd" />
 
 管理画面のようなチャネルのページが開かれていたらOKです。
+
+<img width="1012" height="561" alt="image" src="https://github.com/user-attachments/assets/abb3eace-6df0-4884-97aa-f60a675ebce2" />
+
 
 ### 2-2. miiboにLINEの情報を登録しよう
 
@@ -58,9 +61,15 @@ miiboとLINEが連携することで、会話型AIが組み込まれたLINE Bot�
 1. miiboの管理画面に戻る
 2. 左側のメニューバーから**「外部サービス連携」**をクリック
 
+<img width="1103" height="566" alt="image" src="https://github.com/user-attachments/assets/93522e57-5db5-48c4-b9c2-dff04fea8451" />
+
+
 #### 手順2：LINE連携を選択
 
 1. **「LINE上で会話する」**をクリック
+
+<img width="898" height="428" alt="image" src="https://github.com/user-attachments/assets/28108d78-df50-4f5e-8644-f7a076f652f2" />
+
 
 #### 手順3：認証情報を入力
 
@@ -68,12 +77,16 @@ miiboとLINEが連携することで、会話型AIが組み込まれたLINE Bot�
    - **チャネルシークレット**
    - **チャネルアクセストークン**
 
+<img width="898" height="437" alt="image" src="https://github.com/user-attachments/assets/db8f02e3-b784-4501-a8dc-41c28398a355" />
+
 2. 2つの情報が入力できたら、**「LINEと連携する」**ボタンをクリック
 
 #### 手順4：Webhook URLの確認
 
 連携がうまくいくと、**Webhook URL**というURLが発行されます。
 このURLをコピーして、次のステップで使用します。
+
+<img width="896" height="485" alt="image" src="https://github.com/user-attachments/assets/1704ebe5-d480-4ae2-9f22-0cf813c06ce8" />
 
 ### 💡 Webhookとは？
 
@@ -94,25 +107,45 @@ Webhookとは、アプリケーション間でリアルタイムにデータを�
 
 1. miiboで発行された**「Webhook URL」**をコピー
 
+<img width="895" height="514" alt="image" src="https://github.com/user-attachments/assets/b869b3de-63d7-49ab-901a-7977c74826ad" />
+
+
 #### 手順2：LINE側でWebhook設定
 
 1. LINEのチャネルページに戻る
 2. **「Messaging API設定」**タブをクリック
+
+<img width="797" height="428" alt="image" src="https://github.com/user-attachments/assets/784bb04a-dd70-4d64-ae4a-4d423458c017" />
+
 3. **Webhook設定**の中の**「編集」**をクリック
+
+<img width="401" height="142" alt="image" src="https://github.com/user-attachments/assets/7e7441f8-4943-4695-afe8-a9151c21c744" />
 
 #### 手順3：URLを登録
 
 1. コピーしたWebhook URLを貼り付け
 2. **「更新」**をクリック
 
+<img width="902" height="219" alt="image" src="https://github.com/user-attachments/assets/50632491-729a-45bd-b08b-1b56812310df" />
+
+
 #### 手順4：Webhookを有効化
 
 1. **「Webhookの利用」**の右側にあるスイッチをクリックしてオンにする
 
+<img width="200" height="77" alt="image" src="https://github.com/user-attachments/assets/f96dd533-fb85-46c9-b7ce-25e6ac4b0638" />
+
+
 #### 手順5：接続テスト
 
 1. **「検証」**をクリック
+
+ <img width="434" height="212" alt="image" src="https://github.com/user-attachments/assets/748043f9-8768-4446-b97e-2fa9175d451e" />
+   
 2. **「成功」**の表示が出ることを確認
+
+<img width="264" height="107" alt="image" src="https://github.com/user-attachments/assets/5d5ac3e2-4b20-4c8a-a084-17c418785848" />
+
 3. **「OK」**で閉じる
 
 🎉 これで連携完了です！
@@ -133,10 +166,7 @@ AIと対話できましたか？
 #### 試してみる質問例
 
 - 「こんにちは」
-- 「今日の天気は？」
-- 「おすすめの本を教えて」
-- 「プログラミングについて教えて」
-
+- 「佐賀のおいしいものを教えて」などなど
 ---
 
 ## 3. Tips 💡
