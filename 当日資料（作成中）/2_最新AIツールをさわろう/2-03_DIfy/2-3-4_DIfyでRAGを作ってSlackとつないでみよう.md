@@ -140,182 +140,267 @@ Chunk-09: 「枝吉神陽」に関する記述です。「藩政改革」とい�
 
 このように、Difyは単なる文字列検索ではなく、**ベクトル検索（意味をベクトル化して類似度を測る）**を用いることで、「総理大臣」という文字が含まれていないにもかかわらず、その概念や役割に関連する人物の情報を正確に引き出しているのです。
 
-３、dify上でナレッジを使ったチャットボットを作る
+---
 
-①Dify上でチャットボットを作成する
-アプリを作成→最初から作成→チャットボット→アプリ名を入力→「作成」を押す
+## 3. Dify上でナレッジを使ったチャットボットを作る
+
+### ①Dify上でチャットボットを作成する
+
+1. アプリを作成
+2. 最初から作成
+3. チャットボット
+4. アプリ名を入力
+5. 「作成」を押す
 
 <img width="164" height="92" alt="image" src="https://github.com/user-attachments/assets/b26d2d4b-ec5e-4dc6-bfa1-716fd230d135" />
 
 <img width="626" height="343" alt="image" src="https://github.com/user-attachments/assets/85fcd517-7868-49cd-8227-24538a456378" />
 
-プロンプトに以下を入力
+### プロンプトの設定
 
+以下のプロンプトを入力：
+
+```
 あなたは佐賀県の歴史に詳しい案内人です。
 以下の「コンテキスト」に含まれる情報を最優先に使って質問に答えてください。
 コンテキストに情報がない場合は「このナレッジには情報がありません」と答えてください。
+```
 
-②「コンテキスト」の「追加」をおす
+### ②コンテキストの追加
+
+「コンテキスト」の「追加」を押す。
 
 <img width="639" height="458" alt="image" src="https://github.com/user-attachments/assets/d8514065-9194-4d65-973c-93dedf8c5e99" />
 
-③参照する知識が選択できるので「佐賀出身の偉人」を選択し、「追加」
+### ③ナレッジベースの選択
+
+参照する知識が選択できるので「佐賀出身の偉人」を選択し、「追加」を押す。
 
 <img width="208" height="109" alt="image" src="https://github.com/user-attachments/assets/b83df8e8-7736-4a8c-9392-e4e995028b0c" />
 
-追加されたコンテキストの右側に円ぴーつマークがあらわれるので押すと「ナレッジベースの設定」がでてくるので、「検索設定」を「ハイブリッド検索」にする
+### 検索設定の調整
+
+追加されたコンテキストの右側に鉛筆マークが現れるので押すと「ナレッジベースの設定」が出てくる。
+「検索設定」を「ハイブリッド検索」に変更する。
+
 <img width="484" height="539" alt="image" src="https://github.com/user-attachments/assets/12c7644c-94be-4ab9-b4ce-897a11e31316" />
 
 
-４，slack app側の設定をする
+---
 
-Bot TokenをSlack側で発行する
+## 4. Slack App側の設定をする
 
-Slack API: Your Apps
- にアクセス
-Slackアカウントでログインしてる必要あり
+### Bot TokenをSlack側で発行する
 
-真ん中の 「Create New App」 をクリック
+#### 準備
+- [Slack API: Your Apps](https://api.slack.com/apps) にアクセス
+- Slackアカウントでログインしている必要あり
+
+#### ①Slack Appの作成
+
+真ん中の「Create New App」をクリック。
 
 <img width="1105" height="478" alt="image" src="https://github.com/user-attachments/assets/e0db8f53-06b0-478d-8060-71dcc87d405e" />
 
-ポップアップが出たら
+#### ②作成方法の選択
 
-「From scratch」 を選ぶ（ゼロから作成）
+ポップアップが出たら：
 
-App Name：わかりやすい名前（例：佐賀偉人Bot）
+- **作成方法：** 「From scratch」を選ぶ（ゼロから作成）
+- **App Name：** わかりやすい名前（例：佐賀偉人Bot）
+- **Pick a workspace to develop your app in：** Botを導入したいSlackワークスペースを選ぶ
 
-Pick a workspace to develop your app in：
-Botを導入したいSlackワークスペースを選ぶ
 <img width="400" height="389" alt="image" src="https://github.com/user-attachments/assets/24264515-6f29-4008-ad93-1ac519f559c2" />
 
-Create App を押すと、アプリが作成される
+「Create App」を押すと、アプリが作成される。
 
-アプリ管理メニューの左側のバーに「OAuth ＆ Permissons」が表示されるので、押す
+#### ③OAuth設定
+
+アプリ管理メニューの左側のバーに「OAuth & Permissions」が表示されるので、それを押す。
+
 <img width="271" height="522" alt="image" src="https://github.com/user-attachments/assets/5101d004-2dfd-428d-a933-63f8fc2adc86" />
 
-Scopes→Add an OAuth Scopeを押す
+#### ④権限（Scopes）の設定
+
+「Scopes」→「Add an OAuth Scope」を押す。
+
 <img width="529" height="500" alt="image" src="https://github.com/user-attachments/assets/15c97fd7-120a-4992-92dc-a89b353a8647" />
 
-以下の二つを選択し、追加する。
-app_mentions:read
-　→ Slackで @佐賀偉人Bot と呼ばれたときに反応できる
-chat:write
-　→ BotがSlackにメッセージを返せる
+以下の2つの権限を選択し、追加する：
+
+- **app_mentions:read**
+  - Slackで @佐賀偉人Bot と呼ばれたときに反応できる
+- **chat:write**
+  - BotがSlackにメッセージを返せる
+
 <img width="457" height="209" alt="image" src="https://github.com/user-attachments/assets/685c16d0-5ea3-494d-9cec-8cedf56926d8" />
 
-追加されると以下のように表示される
+追加されると以下のように表示される：
+
 <img width="500" height="326" alt="image" src="https://github.com/user-attachments/assets/485ad05e-e395-4ffb-ad06-81b2d5b7f10b" />
 
+#### ⑤Bot名の設定
 
-次に、左バーの「App Home」を選択する
+次に、左バーの「App Home」を選択する。
+
 <img width="752" height="523" alt="image" src="https://github.com/user-attachments/assets/a4dd99d2-ad3a-462a-af1c-a3e6285984c2" />
 
-Your App’s Presence in Slack→App Display Name→Editを押す
+「Your App's Presence in Slack」→「App Display Name」→「Edit」を押す。
+
 <img width="514" height="289" alt="image" src="https://github.com/user-attachments/assets/fa11c5d3-cc47-4847-a901-2251a813889c" />
 
-Display Name (Bot Name)
-→ Slackに表示される名前（自由につけてOK）
-例：佐賀偉人Bot
+以下の情報を入力：
 
-Default username
-→ Slackで @ で呼び出すときの名前（小文字・英数字のみ）
-例：sagaijinbot
-を入れて「Add」を押す
+- **Display Name (Bot Name)**
+  - Slackに表示される名前（自由につけてOK）
+  - 例：佐賀偉人Bot
+
+- **Default username**
+  - Slackで @ で呼び出すときの名前（小文字・英数字のみ）
+  - 例：sagaijinbot
+
+入力後、「Add」を押す。
+
 <img width="407" height="392" alt="image" src="https://github.com/user-attachments/assets/79d618ac-70dd-4ea3-8cff-7797b93da7c5" />
 
+#### ⑥Botのインストール
+
 再度「OAuth & Permissions」に戻る。
+
 <img width="856" height="530" alt="image" src="https://github.com/user-attachments/assets/c0d9906d-1306-409a-bee2-4119811343e2" />
 
-「OAuth TOkens」→「Install to {ワークスペース名}」を押す
+「OAuth Tokens」→「Install to {ワークスペース名}」を押す。
+
 <img width="837" height="539" alt="image" src="https://github.com/user-attachments/assets/fbefabb7-8fea-4db8-a906-601a67172731" />
 
-下記のような画面が出てくるので「許可する」を押す
+権限確認画面が出てくるので「許可する」を押す。
+
 <img width="947" height="419" alt="image" src="https://github.com/user-attachments/assets/f2f8afc1-1646-4bd1-8a6c-d0b4d92b9b78" />
 
-OAuth Tokensの「Bot User OAuth Token」をコピーする（メモ帳などにはりつけて保存しておく）
+#### ⑦トークンの取得
+
+OAuth Tokensの「Bot User OAuth Token」をコピーする（メモ帳などに貼り付けて保存しておく）。
+
 <img width="808" height="514" alt="image" src="https://github.com/user-attachments/assets/da86261d-dee6-48eb-b35a-29be33496327" />
 
-５、DIfyにスラックボットプラグインをインストールして
+---
 
-①Difyマーケットプレイスに接続する（https://marketplace.dify.ai/）と、以下の画面が表示されるので、検索バーに「Slack Bot」と入力し、Slack Botをクリック。
+## 5. Difyにスラックボットプラグインをインストール
+
+### ①Difyマーケットプレイスでプラグインを探す
+
+[Difyマーケットプレイス](https://marketplace.dify.ai/)に接続すると、以下の画面が表示される。
+検索バーに「Slack Bot」と入力し、Slack Botをクリック。
 
 <img width="656" height="373" alt="image" src="https://github.com/user-attachments/assets/c3cc01f6-04b7-4f07-b5a6-d9afda577c2e" />
 
-②「Install」をクリック
+### ②プラグインのインストール
+
+「Install」をクリック。
 
 <img width="620" height="294" alt="image" src="https://github.com/user-attachments/assets/fa742279-6151-4b69-9748-5966af2c342b" />
 
-⑥もう一度インストールを押す画面が表示されるのでそれを押すと、下記のようにインストール表示成功画面が出る。
+もう一度インストールを押す画面が表示されるので、それを押すとインストール成功画面が出る。
 
 <img width="290" height="173" alt="image" src="https://github.com/user-attachments/assets/ccb8bafa-c698-44cf-8808-33d98cb61661" />
 
-Dify画面右上の「プラグイン」を押して、Slack　Botを選択して押す
+### ③プラグインの設定
+
+Dify画面右上の「プラグイン」を押して、「Slack Bot」を選択して押す。
 
 <img width="641" height="224" alt="image" src="https://github.com/user-attachments/assets/962da02e-5d94-4b6f-9aae-2200311f23d8" />
 
-右側に画面が表示されるので、「エンドポイント」の「＋」マークを押す
+右側に画面が表示されるので、「エンドポイント」の「＋」マークを押す。
 
 <img width="212" height="117" alt="image" src="https://github.com/user-attachments/assets/5f5217de-de7e-4fd1-a6f4-6199ad7fd49f" />
 
+### エンドポイントの設定
 
-エンドポイント名
-　→ わかりやすい名前をつける（自由）
-　例：佐賀偉人Bot
+以下の情報を入力：
 
-Bot Token
-　→ Slackで「Install to Workspace」したときに発行された
-　　xoxb-... で始まる Bot User OAuth Token をコピペ
+- **エンドポイント名**
+  - わかりやすい名前をつける（自由）
+  - 例：佐賀偉人Bot
 
-アプリ
-　→ Difyで作った「佐賀偉人ナレッジ付きチャットボット」を選択
+- **Bot Token**
+  - Slackで「Install to Workspace」したときに発行された
+  - xoxb-... で始まる Bot User OAuth Token をコピーペースト
 
-「保存」ボタンを押す
+- **アプリ**
+  - Difyで作った「佐賀偉人ナレッジ付きチャットボット」を選択
+
+「保存」ボタンを押す。
 
 <img width="329" height="320" alt="image" src="https://github.com/user-attachments/assets/99c88e87-64de-409c-94d8-5712bc2963b0" />
 
-POST URLが発行されるので、https://以降をコピーする
+### ④POST URLの取得
+
+POST URLが発行されるので、https://以降をコピーする。
+
 <img width="329" height="223" alt="image" src="https://github.com/user-attachments/assets/756afea6-1a82-4c3e-a85f-e928b1ceabbf" />
 
-Slack APIの管理画面に戻り、Event Subscriptions→Enable EventsをONにする
+### ⑤Slack側のイベント設定
+
+Slack APIの管理画面に戻り、「Event Subscriptions」→「Enable Events」をONにする。
+
 <img width="1097" height="534" alt="image" src="https://github.com/user-attachments/assets/18ef1a79-69e3-483f-8f82-936b6e144140" />
 
-先ほどDify側でコピペしたPOST URLをはりつけて→Verifiedが表示されればOK
+先ほどDify側でコピーしたPOST URLを貼り付けて、「Verified」が表示されればOK。
+
 <img width="704" height="443" alt="image" src="https://github.com/user-attachments/assets/192bb98e-1bad-44ff-a01e-8249b3d1496f" />
 
-下にある「Sabscribe to bot events」をクリック
+### ⑥イベントの購読設定
+
+下にある「Subscribe to bot events」をクリック。
+
 <img width="543" height="450" alt="image" src="https://github.com/user-attachments/assets/58a3f019-4412-4052-89d2-b52443dcea03" />
 
-Add Bot User Eventを押すと選択肢が表れるので、app_mention（@メンションされたとき）
-message.im（DM受信）を追加
+「Add Bot User Event」を押すと選択肢が表れるので、以下を追加：
+
+- **app_mention** - @メンションされたとき
+- **message.im** - DM受信
+
 <img width="488" height="245" alt="image" src="https://github.com/user-attachments/assets/455d583a-174b-4bf0-bb94-3a862e1d839a" />
 
-正しく選べていたら、「Save Changes」を押す
+正しく選べていたら、「Save Changes」を押す。
+
 <img width="654" height="491" alt="image" src="https://github.com/user-attachments/assets/ced076b1-eea0-49e3-ad43-04bcaf5a4ef5" />
 
-以下のエラーが出るので（権限（Scopes）を変えたら必ず再インストールが必要）、以下を再度操作。
+### ⑦再インストール（権限変更時）
 
-＜エラー＞
-You’ve changed the permission scopes your app uses. Please reinstall your app for these changes to take effect (and if your app is listed in the Slack Marketplace, you’ll need to resubmit it as well).
+以下のエラーが出る場合（権限を変えたら必ず再インストールが必要）：
 
-＜再度操作する内容＞
-Slack APIコンソール → OAuth & Permissions
-上部の Install to Workspace（または Reinstall to Workspace）→ 許可
-画面に出る Bot User OAuth Token（xoxb-…） をコピー
-もし前と違うトークンになったら、Dify側のBot Tokenも更新して保存
+**エラーメッセージ：**
+> You've changed the permission scopes your app uses. Please reinstall your app for these changes to take effect.
 
+**対処法：**
+1. Slack APIコンソール → OAuth & Permissions
+2. 上部の「Install to Workspace」（または「Reinstall to Workspace」）→ 許可
+3. 画面に出る Bot User OAuth Token（xoxb-…）をコピー
+4. もし前と違うトークンになったら、Dify側のBot Tokenも更新して保存
 
-スラック上でボットを呼び出す
-適当なチャンネル（例: #all-my）を開く
-/invite @佐賀偉人Bot を実行してBotをそのチャンネルに招待
+---
+
+## 6. Slack上でボットを呼び出す
+
+### ボットの招待
+
+1. 適当なチャンネル（例: #general）を開く
+2. `/invite @佐賀偉人Bot` を実行してBotをそのチャンネルに招待
 
 <img width="848" height="592" alt="image" src="https://github.com/user-attachments/assets/55e62f53-2b66-4e75-8195-88441edebeb7" />
 
-@佐賀偉人Botでメンションして、会話をしてみよう！
+### 動作確認
+
+`@佐賀偉人Bot` でメンションして、会話をしてみましょう！
 
 <img width="559" height="389" alt="image" src="https://github.com/user-attachments/assets/ba7fb2f9-3f38-4c68-b167-51625e8f7b8d" />
 
-もし途中で躓いたら、GPTやGeminiに操作中の画面の画像を送って、わからないポイントを聞くと教えてくれるよ！
+---
+
+## トラブルシューティング
+
+もし途中で躓いたら、ChatGPTやGeminiに操作中の画面の画像を送って、わからないポイントを聞くと教えてくれます！
 
 
 
