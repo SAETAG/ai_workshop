@@ -33,7 +33,7 @@
 2. 「画像を生成」のタブが出てくるので選択
 3. 記入欄に生成したい画像のイメージをテキストで入力
    - 例：「動物、地球、楽しい」
-4. 入力後、左下の→を実行
+4. 入力後、右下の「→」を実行
 <img width="1657" height="1045" alt="image" src="https://github.com/user-attachments/assets/460d41c6-9b87-4bfd-81b7-c317c041a4df" />
 
 ### Step 3: 画像をダウンロード
@@ -191,3 +191,4 @@ Step 3: Canvaで合成
 ## 📚 参考リンク
 
 - [Canva公式ヘルプ](https://www.canva.com/help/)
+- アプリのUIは変更することがあります。本記事は2025年9月時点での情報です。
