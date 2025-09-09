@@ -51,6 +51,8 @@ miiboを使って、会話型AIのLINE Botを作りましょう！
 ### 2-1. miiboを始めよう
 
 miiboにログインして、ダッシュボード画面が表示されていることを確認しましょう。
+<img width="1111" height="568" alt="image" src="https://github.com/user-attachments/assets/f3ba7cdd-8d21-4b62-aeb3-8bb95ebd0f26" />
+
 
 ### 2-2. チャットボットを作成しよう
 
