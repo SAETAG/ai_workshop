@@ -34,14 +34,14 @@ miiboとLINEが連携することで、会話型AIが組み込まれたLINE Bot�
 
 #### 手順2：LINEアカウントでログイン
 
-1. **「LINEアカウントでログイン」**をクリック
-2. **「ログイン」**をクリック
+1.  **「LINEアカウントでログイン」** をクリック
+2.  **「ログイン」** をクリック
 
 <img width="389" height="503" alt="image" src="https://github.com/user-attachments/assets/202cd22b-4897-474c-82b2-49703a6ed98e" />
 
 #### 手順3：チャネルを開く
 
-1. 画面左側の**「プロバイダー」**を開く
+1. 画面左側の **「プロバイダー」** を開く
 2. 事前に作成した**プロバイダー**をクリック
 3. 事前に作成している**チャネル**をクリック
 
@@ -66,7 +66,7 @@ miiboとLINEが連携することで、会話型AIが組み込まれたLINE Bot�
 
 #### 手順2：LINE連携を選択
 
-1. **「LINE上で会話する」**をクリック
+1.  **「LINE上で会話する」** をクリック
 
 <img width="898" height="428" alt="image" src="https://github.com/user-attachments/assets/28108d78-df50-4f5e-8644-f7a076f652f2" />
 
@@ -79,7 +79,7 @@ miiboとLINEが連携することで、会話型AIが組み込まれたLINE Bot�
 
 <img width="898" height="437" alt="image" src="https://github.com/user-attachments/assets/db8f02e3-b784-4501-a8dc-41c28398a355" />
 
-2. 2つの情報が入力できたら、**「LINEと連携する」**ボタンをクリック
+2. 2つの情報が入力できたら、 **「LINEと連携する」** ボタンをクリック
 
 #### 手順4：Webhook URLの確認
 
@@ -117,7 +117,7 @@ Webhookとは、アプリケーション間でリアルタイムにデータを�
 
 <img width="797" height="428" alt="image" src="https://github.com/user-attachments/assets/784bb04a-dd70-4d64-ae4a-4d423458c017" />
 
-3. **Webhook設定**の中の**「編集」**をクリック
+3. **Webhook設定**の中の **「編集」** をクリック
 
 <img width="401" height="142" alt="image" src="https://github.com/user-attachments/assets/7e7441f8-4943-4695-afe8-a9151c21c744" />
 
@@ -131,7 +131,7 @@ Webhookとは、アプリケーション間でリアルタイムにデータを�
 
 #### 手順4：Webhookを有効化
 
-1. **「Webhookの利用」**の右側にあるスイッチをクリックしてオンにする
+1.  **「Webhookの利用」** の右側にあるスイッチをクリックしてオンにする
 
 <img width="200" height="77" alt="image" src="https://github.com/user-attachments/assets/f96dd533-fb85-46c9-b7ce-25e6ac4b0638" />
 
@@ -147,6 +147,25 @@ Webhookとは、アプリケーション間でリアルタイムにデータを�
 <img width="264" height="107" alt="image" src="https://github.com/user-attachments/assets/5d5ac3e2-4b20-4c8a-a084-17c418785848" />
 
 3. **「OK」**で閉じる
+
+#### 手順6：応答メッセージをOFFにする（重要！）
+
+デフォルトの自動応答メッセージを無効にして、miiboからの応答だけが返るようにします。
+
+1.  **「LINE公式アカウント機能」** セクションまでスクロール
+2.  **「応答メッセージ」** の「編集」をクリック
+
+<img width="400" height="150" alt="image" src="https://github.com/user-attachments/assets/応答メッセージ編集">
+
+3. LINE Official Account Managerが新しいタブで開きます
+4.  **「応答設定」** → **「詳細設定」** をクリック
+5.  **「応答メッセージ」** をOFFに変更
+6.  **「Webhook」** がONになっていることを確認
+
+<img width="500" height="250" alt="image" src="https://github.com/user-attachments/assets/応答設定画面">
+
+💡 **なぜこの設定が必要？**
+> この設定をしないと、「メッセージありがとうございます！申し訳ありませんが...」というLINEのデフォルトメッセージが先に返ってきてしまい、その後にmiiboからの応答が届く二重返信になってしまいます。
 
 🎉 これで連携完了です！
 
