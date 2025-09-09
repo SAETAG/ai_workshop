@@ -29,10 +29,15 @@ miiboとLINEが連携することで、会話型AIが組み込まれたLINE Bot�
 1. [LINE Developers](https://developers.line.biz/)を開く
 2. 画面右上の**「コンソールにログイン」**をクリック
 
+<img width="1088" height="407" alt="image" src="https://github.com/user-attachments/assets/1df9fcf4-4dba-4744-8013-86a962eff92d" />
+
+
 #### 手順2：LINEアカウントでログイン
 
 1. **「LINEアカウントでログイン」**をクリック
 2. **「ログイン」**をクリック
+
+<img width="389" height="503" alt="image" src="https://github.com/user-attachments/assets/202cd22b-4897-474c-82b2-49703a6ed98e" />
 
 #### 手順3：チャネルを開く
 
