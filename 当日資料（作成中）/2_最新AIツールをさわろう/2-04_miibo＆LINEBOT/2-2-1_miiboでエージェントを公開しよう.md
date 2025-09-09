@@ -61,8 +61,11 @@ miiboにログインして、ダッシュボード画面が表示されている
 #### 手順1：新規作成を開始
 
 1.  **「新規作成して開始する」** ボタンをクリックします。
+   <img width="485" height="272" alt="image" src="https://github.com/user-attachments/assets/78697306-4416-4f4d-98d8-f3973e682902" />
 
-2.  **「通常モードで新規作成する」** の中にある **「新規作成する」** ボタンをクリックします。
+3.  **「通常モードで新規作成する」** の中にある **「新規作成する」** ボタンをクリックします。
+   <img width="920" height="503" alt="image" src="https://github.com/user-attachments/assets/f9b9c6c8-6837-4b6d-a284-8679d0c5b6e4" />
+
 
 #### 手順2：基本情報の設定
 
