@@ -155,14 +155,14 @@ Webhookとは、アプリケーション間でリアルタイムにデータを�
 1.  **「LINE公式アカウント機能」** セクションまでスクロール
 2.  **「応答メッセージ」** の「編集」をクリック
 
-<img width="400" height="150" alt="image" src="https://github.com/user-attachments/assets/応答メッセージ編集">
+<img width="934" height="315" alt="image" src="https://github.com/user-attachments/assets/dff3f6fa-6e93-4441-a889-40554c2b9ef0" />
 
 3. LINE Official Account Managerが新しいタブで開きます
 4.  **「応答設定」** → **「詳細設定」** をクリック
 5.  **「応答メッセージ」** をOFFに変更
 6.  **「Webhook」** がONになっていることを確認
 
-<img width="500" height="250" alt="image" src="https://github.com/user-attachments/assets/応答設定画面">
+<img width="865" height="434" alt="image" src="https://github.com/user-attachments/assets/5faefb2f-f723-400b-b185-011dada73cdd" />
 
 💡 **なぜこの設定が必要？**
 > この設定をしないと、「メッセージありがとうございます！申し訳ありませんが...」というLINEのデフォルトメッセージが先に返ってきてしまい、その後にmiiboからの応答が届く二重返信になってしまいます。
