@@ -112,7 +112,6 @@ miiboにログインして、ダッシュボード画面が表示されている
 
 > **GPT-4o-mini**（5ポイント）を選びましょう！
 > GPT-4は高精度ですが50ポイント消費するため、今回は使いません。
->
 
 <img width="738" height="252" alt="image" src="https://github.com/user-attachments/assets/b51f407f-048d-47a6-b297-369020215664" />
 
@@ -152,18 +151,11 @@ miiboにログインして、ダッシュボード画面が表示されている
 
 #### 設定手順
 
-1.  **「プロンプトテンプレートから選ぶ」** ボタンをクリック（または上記の例を直接入力）
-
-2. テンプレートを選ぶ場合は **「デフォルトテンプレート」** を選択
-   - または、上記の佐賀テーマの例をコピペして使用してもOK！
-
-3. すでに入っているプロンプトを上書きしていいか聞かれたら **「OK」** をクリック
+1.  プロンプトを入力する（上記プロンプト例を参考）。テンプレートを選ぶことや、AIに考えてもらうことも可能。デフォルトで入ってる文字は削除して上書きしてOK。
 
    <img width="490" height="250" alt="image" src="https://github.com/user-attachments/assets/c40cd245-f058-4094-837d-bcaa66f53615" />
 
-4. プロンプトの中身が変更されたことを確認
-
-5. 下にスクロールし、 **「エージェントを作成」** の中にある**「登録して開始する」**をクリック
+2. 下にスクロールし、 **「エージェントを作成」** の中にある**「登録して開始する」**をクリック
 
    <img width="571" height="194" alt="image" src="https://github.com/user-attachments/assets/7ebbf87a-ebf4-421f-9968-582ec8f9dff3" />
 
@@ -176,9 +168,16 @@ miiboにログインして、ダッシュボード画面が表示されている
 
 1. 画面下にある **「会話をテストする」** ボタンをクリック
 
+<img width="1128" height="578" alt="image" src="https://github.com/user-attachments/assets/c213a9a5-ad8b-4658-a2b4-59bef7cb99b1" />
+
 2. チャット画面が開かれます
 
+<img width="1100" height="556" alt="image" src="https://github.com/user-attachments/assets/94fe9627-54cb-45f0-83a0-6cf96a9f86a9" />
+
 3. 何かメッセージを送信して、AIから返答をもらいましょう！
+
+<img width="1084" height="437" alt="image" src="https://github.com/user-attachments/assets/0c214af4-3d14-4ed3-99b1-b29e44e0f401" />
+
 
 ⚠️ **注意**: 1回送るごとに5回分の会話消費があるので、試しすぎないよう注意してください
 
@@ -197,17 +196,26 @@ miiboのエージェントには、 **プレビュー版** と **公開版** が
 
 1. 管理画面に戻り、左のメニューバーから **「公開設定」** をクリック
 
+<img width="1130" height="568" alt="image" src="https://github.com/user-attachments/assets/686939e4-eba8-46f6-854c-fbd80d2d8fca" />
+
 2. 公開範囲は **「一般公開」** に設定
+
+<img width="911" height="526" alt="image" src="https://github.com/user-attachments/assets/0d0607ff-097b-439e-a828-feeb30d13168" />
 
 3. 右隣の **「利用規約に同意して公開」** ボタンをクリック
 
+<img width="310" height="103" alt="image" src="https://github.com/user-attachments/assets/192de6c0-6a41-4c50-9550-c1c8de96b22f" />
+
 4. 公開するか聞かれるので、 **「公開する」** ボタンをクリック
+
+<img width="382" height="126" alt="image" src="https://github.com/user-attachments/assets/d4f3c199-bbbc-4327-805e-0f0078df2529" />
+
 
 ### 2-6. 完成したエージェントを使ってみよう
 
 これでプレビュー版ではなく、公開して使えるチャットボットになりました。
 
-1. 画面を下にスクロールすると、チャット画面の公開情報が表示されます
+1. 画面を下にスクロールすると、「チャット画面の公開設定」という箇所が表示されます
 
 2. スマートフォンで **QRコード** を読み取り、無事に公開できているか確認
 
