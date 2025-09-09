@@ -67,7 +67,7 @@ ChatGPTなどに以下例で依頼し、短く覚えやすい歌詞を作成し�
    - `detroit rap, latin, lo-fi, synthwave`
 5. 生成（Generate）を実行
 
-<img width="562" height="566" alt="image" src="https://github.com/user-attachments/assets/d7f46562-6d4b-4141-af3d-a7ff62e5a276" />
+<img width="558" height="493" alt="image" src="https://github.com/user-attachments/assets/6eb53034-5e68-481e-a7cd-3fe09b196e19" />
 
 日本語歌詞が歌われない場合は、スタイル/歌詞どちらにも「Japanese lyrics」を明記してください。
 
