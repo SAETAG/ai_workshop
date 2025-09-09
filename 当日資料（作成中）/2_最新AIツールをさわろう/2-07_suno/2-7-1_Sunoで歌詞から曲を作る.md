@@ -65,7 +65,7 @@ ChatGPTなどに以下例で依頼し、短く覚えやすい歌詞を作成し�
 2. 歌詞（Lyrics）欄に手順2で作成した歌詞を貼り付け
 3. スタイル（Styles）欄に以下を入力する又は表示されているスタイルから好きなものを選択する
    - `detroit rap, latin, lo-fi, synthwave`
-5. 生成（Generate）を実行
+5. 生成（Create）を実行
 
 <img width="558" height="493" alt="image" src="https://github.com/user-attachments/assets/6eb53034-5e68-481e-a7cd-3fe09b196e19" />
 
