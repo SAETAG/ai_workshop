@@ -80,7 +80,8 @@ miiboにログインして、ダッシュボード画面が表示されている
   - 「佐賀観光ガイド」
   - 「佐賀あるあるBot」
   - 「〇〇（あなたの名前）Bot」
-    <img width="526" height="231" alt="image" src="https://github.com/user-attachments/assets/770c787b-6641-447a-b2e7-f4ad9ebabd6c" />
+  
+   <img width="526" height="231" alt="image" src="https://github.com/user-attachments/assets/770c787b-6641-447a-b2e7-f4ad9ebabd6c" />
 
 
 **② 提供者名を入力**
