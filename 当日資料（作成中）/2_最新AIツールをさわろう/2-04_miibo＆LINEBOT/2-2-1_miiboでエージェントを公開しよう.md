@@ -87,6 +87,8 @@ miiboにログインして、ダッシュボード画面が表示されている
 **② 提供者名を入力**
 - あなたの名前やニックネームを入力します
 
+　<img width="517" height="174" alt="image" src="https://github.com/user-attachments/assets/d41db6b3-84bf-4c49-ba5a-ee17eb2a22ad" />
+
 
 **③ イメージの設定（オプション）**
 - チャットボットのアイコン画像です
@@ -100,6 +102,9 @@ miiboにログインして、ダッシュボード画面が表示されている
   - 「佐賀県民のあるあるネタで楽しく会話します」
   - 「あなたの質問に何でも答える親切なAIアシスタントです」
 
+  <img width="488" height="223" alt="image" src="https://github.com/user-attachments/assets/61f8100f-919b-42eb-98da-267571c10c6e" />
+
+
 **⑤ 言語モデルの選択**
 -  **「GPT-4o-mini」** を選びましょう
 
@@ -107,6 +112,10 @@ miiboにログインして、ダッシュボード画面が表示されている
 
 > **GPT-4o-mini**（5ポイント）を選びましょう！
 > GPT-4は高精度ですが50ポイント消費するため、今回は使いません。
+>
+
+<img width="738" height="252" alt="image" src="https://github.com/user-attachments/assets/b51f407f-048d-47a6-b297-369020215664" />
+
 
 ### 2-3. プロンプトの設定しよう
 
@@ -150,9 +159,13 @@ miiboにログインして、ダッシュボード画面が表示されている
 
 3. すでに入っているプロンプトを上書きしていいか聞かれたら **「OK」** をクリック
 
+   <img width="490" height="250" alt="image" src="https://github.com/user-attachments/assets/c40cd245-f058-4094-837d-bcaa66f53615" />
+
 4. プロンプトの中身が変更されたことを確認
 
 5. 下にスクロールし、 **「エージェントを作成」** の中にある**「登録して開始する」**をクリック
+
+   <img width="571" height="194" alt="image" src="https://github.com/user-attachments/assets/7ebbf87a-ebf4-421f-9968-582ec8f9dff3" />
 
 これでエージェントを作る設定ができました！
 登録したチャットボットの管理画面が開かれていればOKです。
