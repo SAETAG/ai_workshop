@@ -142,9 +142,9 @@ RSS（Really Simple Syndication）は、Webサイトの更新情報を配信す�
 <img width="618" height="432" alt="image" src="https://github.com/user-attachments/assets/c8e42b9c-c12f-4b79-b691-3618bd66d433" />
 
 4. 設定
-   - Choose where to start:「From now on」を選択して「SAVE」
+   - Choose where to start:「All RSS feed items」を選択して「SAVE」
   
-<img width="593" height="324" alt="image" src="https://github.com/user-attachments/assets/32c684f9-5503-45ec-bc24-1dc9bb376119" />
+<img width="598" height="368" alt="image" src="https://github.com/user-attachments/assets/f9b0c3a5-a41c-4282-b19a-b3d0691cde2b" />
 
 
 #### ステップ3：Googleスプレッドシートに保存
@@ -191,16 +191,23 @@ RSS（Really Simple Syndication）は、Webサイトの更新情報を配信す�
 
    - 成功するとGoogleスプレッドシートにニュースが追加されます！
 
+<img width="751" height="326" alt="image" src="https://github.com/user-attachments/assets/4a32c00b-5c19-4348-9c28-43d642e935e8" />
+
+3. スケジュール設定
+  - RSSアイコンの横にある「時計」マークを押すと、RSSからどのくらいの頻度でいつ情報を取得するか選べます
+  - 下記画像は、「毎日」の「13時」に取得
+
+<img width="572" height="337" alt="image" src="https://github.com/user-attachments/assets/f55e3be1-8778-4a5e-9901-14d735315021" />
+
+ - ホーム画面→「ALL scenarios」からON/OFFを設定できます
+
+<img width="1104" height="290" alt="image" src="https://github.com/user-attachments/assets/c7ed76f5-1b01-4506-8faa-e876b538a49e" />
+
+
 ### 🎉 これで完成！
 
 シンプルな2ステップで、RSSからニュースを自動収集するシステムができました。
 毎日決まった時間にニュースがスプレッドシートに追加されます。
-
-#### よくあるエラーと対処法
-
-- **Googleアカウント連携エラー**: モジュール設定で「Add」→ログイン
-- **RSSフィードエラー**: 佐賀新聞のURLをコピー&ペースト
-- **スプレッドシートが見つからない**: 名前を確認（「佐賀最新ニュース」）
 
 ---
 
