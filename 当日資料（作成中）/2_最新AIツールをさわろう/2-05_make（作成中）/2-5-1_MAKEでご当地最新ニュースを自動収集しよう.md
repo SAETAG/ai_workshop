@@ -82,18 +82,18 @@ RSS（Really Simple Syndication）は、Webサイトの更新情報を配信す�
    - [Googleドライブ](https://drive.google.com/)→「新規」→「Googleスプレッドシート」
    - シート名を「佐賀最新ニュース」に変更
 
-2. **見出し行を作成**（A1〜F1に入力）
-   | 日付 | タイトル | 概要 | URL | カテゴリ | 重要度 |
-   |-----|---------|------|-----|----------|--------|
+2. **見出し行を作成**（A1〜E1に入力）
+   | 日付 | タイトル | 概要 | URL | カテゴリ |
+   |-----|---------|------|-----|----------|
 
 3. **完了！**
 
-<img width="873" height="572" alt="image" src="https://github.com/user-attachments/assets/bb31b40b-c642-43a4-9a98-f3742113a0e2" />
+<img width="812" height="572" alt="image" src="https://github.com/user-attachments/assets/8943d16d-d84a-46d9-a0dd-6d9b1f7fc6c8" />
+
+
 
 
 ### 2-3. 佐賀関連RSSフィードの調査
-
-#### 主要なRSSフィード例
 
 #### 今回使用するRSSフィード
 
@@ -108,49 +108,92 @@ RSS（Really Simple Syndication）は、Webサイトの更新情報を配信す�
 
 ### 2-4. MAKEでワークフロー作成（最短3ステップ）
 
-#### ステップ1：スケジュール設定
+#### ステップ1：新規シナリオ作成
 
 1. [MAKE](https://www.make.com/)にログイン → 「+」で新規シナリオ作成
-2. 中央の「+」ボタン → 「Schedule」を検索して選択
-3. 設定:
-   - **Run scenario**: `Every Day`（1日1回）
-   - **Timezone**: `Asia/Tokyo`
-   - 「OK」で保存
+
+<img width="1104" height="399" alt="image" src="https://github.com/user-attachments/assets/9f341ae7-f34e-4462-adc1-baedc2153ed9" />
+
+
+2. 「Build from scratch（）」を選択
+
+<img width="659" height="395" alt="image" src="https://github.com/user-attachments/assets/42d3bda5-41da-4af0-9b57-388293816e6b" />
+
 
 #### ステップ2：RSSフィード取得
 
-1. Scheduleの右の「+」 → 「RSS」を検索
+1. 画面中央の「+」 → 「RSS」を検索
+
+
+<img width="650" height="459" alt="image" src="https://github.com/user-attachments/assets/c18b7b07-2307-490c-a12c-2b753c133f32" />
+
+
 2. 「Watch RSS feed items」を選択
+
+
+<img width="584" height="435" alt="image" src="https://github.com/user-attachments/assets/9d9ee7ed-958d-4265-b804-989037c3df28" />
+
+
 3. 設定:
    - **URL**: `https://www.saga-s.co.jp/list/feed/rss`（佐賀新聞RSS）
    - **Maximum number**: `5`（まずは5件でテスト）
-   - 「OK」で保存
+   - 「SAVE」で保存
+
+<img width="618" height="432" alt="image" src="https://github.com/user-attachments/assets/c8e42b9c-c12f-4b79-b691-3618bd66d433" />
+
+4. 設定
+   - Choose where to start:「From now on」を選択して「SAVE」
+  
+<img width="593" height="324" alt="image" src="https://github.com/user-attachments/assets/32c684f9-5503-45ec-bc24-1dc9bb376119" />
+
 
 #### ステップ3：Googleスプレッドシートに保存
 
-1. RSSの右の「+」 → 「Google Sheets」を検索
+1. RSSの右の「+」 → 「Google Sheets」を選択
+
+<img width="995" height="447" alt="image" src="https://github.com/user-attachments/assets/e2667946-774b-4f6d-9809-29ab2d57b790" />
+
 2. 「Add a Row」を選択
-3. Googleアカウントを連携（初回のみ）
+
+<img width="992" height="442" alt="image" src="https://github.com/user-attachments/assets/b212f9cf-59d4-40cf-ada9-25cd39c1f8ff" />
+
+3. Googleアカウントを連携（初回のみ）「Create a connection」→「Sign with Google」３回くらい認証が聞かれるので「OK」などを押して進む
+
+<img width="1000" height="404" alt="image" src="https://github.com/user-attachments/assets/0d7b2c8b-5a95-4892-b717-e9df08e2aac8" />
+
 4. 設定:
-   - **Spreadsheet**: 「佐賀最新ニュース」を選択
-   - **Sheet**: `シート1`
-   - **Values**（各列にマッピング）:
-     - A列: RSSモジュールから`Published`を選択
-     - B列: RSSモジュールから`Title`を選択
-     - C列: RSSモジュールから`Summary`を選択
-     - D列: RSSモジュールから`URL`を選択
-     - E、F列: 空欄でOK
+   - Connectnion: My Google connection のままでOK
+   - Search Method: Search by path のままでOK
+   - Drive: My Drive ののままでOK
+   - Spreadsheet ID: 「Click here to choose file」を押して先ほど作成した「佐賀最新ニュース」を選択
+      - 選択すると「Sheet Name」がでてくるので「シート１」を選択し、以下も順に設定
+      - Table contains headers: Yes
+      - Values(RSSから取ったデータを、スプレッドシートのどの列に入れるかの設定)
+          - 日付 (A) → RSSモジュールの Date updated
+          - タイトル (B) → RSSモジュールの Title
+          - 概要 (C) → RSSモジュールの Summary
+          - URL (D) → RSSモジュールの URL
+          - カテゴリ (E) → RSSモジュールの Categories
+          - すべて選択して「SAVE」
+       
+   <img width="1048" height="549" alt="image" src="https://github.com/user-attachments/assets/94b97bd0-6cfb-4d40-8389-90ee198008f7" />
+
 
 #### 完成！テスト実行
 
-1. 「Save」ボタンで保存
-2. スイッチを「ON」に
-3. 「Run once」でテスト実行
+1. 「Save」ボタンでシナリオ（ワークフロー）を保存
+
+<img width="719" height="68" alt="image" src="https://github.com/user-attachments/assets/c28766b4-2fd5-4e31-89bc-7cccff10cbcc" />
+
+2. 「Run once」でテスト実行
+
+<img width="713" height="65" alt="image" src="https://github.com/user-attachments/assets/326a9582-c694-4105-b287-fd11d762bfdd" />
+
    - 成功するとGoogleスプレッドシートにニュースが追加されます！
 
 ### 🎉 これで完成！
 
-シンプルな3ステップで、RSSからニュースを自動収集するシステムができました。
+シンプルな2ステップで、RSSからニュースを自動収集するシステムができました。
 毎日決まった時間にニュースがスプレッドシートに追加されます。
 
 #### よくあるエラーと対処法
