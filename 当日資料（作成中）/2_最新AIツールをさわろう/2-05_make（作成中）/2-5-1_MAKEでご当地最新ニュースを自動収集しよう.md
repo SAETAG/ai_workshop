@@ -93,28 +93,11 @@ RSS（Really Simple Syndication）は、Webサイトの更新情報を配信す�
 
 #### 主要なRSSフィード例
 
-##### 🏛️ 公式・行政系
-- **佐賀県公式サイト RSS**
-  - URL例: `https://www.pref.saga.lg.jp/rss/news.xml`
-  - 内容: 県からの重要なお知らせ、政策情報
+#### 今回使用するRSSフィード
 
-- **佐賀市公式サイト RSS**  
-  - URL例: `https://www.city.saga.lg.jp/rss/news.xml`
-  - 内容: 市民向けの生活情報、イベント案内
-
-##### 📰 ニュースメディア系
-- **NHK佐賀 RSS**
-  - URL例: `https://www.nhk.or.jp/saga/lnews/rss/index.xml`
-  - 内容: 地域ニュース、災害情報
-
-- **佐賀新聞 RSS**
-  - URL例: `https://www.saga-s.co.jp/rss/saga-s.xml`
-  - 内容: 地域の詳細なニュース
-
-##### 🎯 専門情報系（一般的なRSSの探し方）
-1. Google検索で「佐賀 イベント RSS」で検索
-2. 各サイトのトップページ下部でRSSリンクを探す
-3. ブラウザの拡張機能「RSS Finder」を使用
+**佐賀新聞 公式RSS**
+- URL: `https://www.saga-s.co.jp/list/feed/rss`
+- 佐賀県の最新ニュースが自動配信されます
 
 💡 **RSSフィード確認方法**
 1. 各サイトで「RSS」「フィード」リンクを探す
@@ -137,7 +120,7 @@ RSS（Really Simple Syndication）は、Webサイトの更新情報を配信す�
 1. Scheduleの右の「+」 → 「RSS」を検索
 2. 「Watch RSS feed items」を選択
 3. 設定:
-   - **URL**: `https://www.nhk.or.jp/saga/lnews/rss/index.xml`（NHK佐賀のRSS）
+   - **URL**: `https://www.saga-s.co.jp/list/feed/rss`（佐賀新聞RSS）
    - **Maximum number**: `5`（まずは5件でテスト）
    - 「OK」で保存
 
@@ -171,7 +154,7 @@ RSS（Really Simple Syndication）は、Webサイトの更新情報を配信す�
 #### よくあるエラーと対処法
 
 - **Googleアカウント連携エラー**: モジュール設定で「Add」→ログイン
-- **RSSフィードエラー**: NHK佐賀のURLをコピー&ペースト
+- **RSSフィードエラー**: 佐賀新聞のURLをコピー&ペースト
 - **スプレッドシートが見つからない**: 名前を確認（「佐賀最新ニュース」）
 
 ---
