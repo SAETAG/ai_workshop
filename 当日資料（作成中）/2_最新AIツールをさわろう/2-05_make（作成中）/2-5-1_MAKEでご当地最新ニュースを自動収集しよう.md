@@ -87,7 +87,9 @@ RSS（Really Simple Syndication）は、Webサイトの更新情報を配信す�
    |-----|---------|------|-----|----------|--------|
 
 3. **完了！**
-   - 💡 書式設定は後回しでOK。まずは動かすことを優先しましょう
+
+<img width="873" height="572" alt="image" src="https://github.com/user-attachments/assets/bb31b40b-c642-43a4-9a98-f3742113a0e2" />
+
 
 ### 2-3. 佐賀関連RSSフィードの調査
 
