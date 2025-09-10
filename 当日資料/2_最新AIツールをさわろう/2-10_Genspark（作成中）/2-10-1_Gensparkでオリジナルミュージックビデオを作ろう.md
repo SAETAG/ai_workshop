@@ -129,12 +129,13 @@
 簡潔で魅力的な動画を作ってください。
 ```
 
-<img width="610" height="365" alt="image" src="https://github.com/user-attachments/assets/881c3ff9-3649-4758-95d9-03d57d4fbcf3" />
+<img width="705" height="385" alt="image" src="https://github.com/user-attachments/assets/2b044766-4075-4cda-9a4f-e686b0405264" />
+
 
 
 #### 手順2：AIとの対話で動画制作
 
-1. プロンプトを入力して「Enter」
+1. プロンプトを入力して「Enter（矢印ボタン）」
 2. Gensparkが動画制作プランを提案
 3. 「はい」「いいえ」で簡単に指示
 4. 約5-10分で動画が完成！
