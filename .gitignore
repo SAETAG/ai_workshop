@@ -1,0 +1,54 @@
+# Claude Code related files
+.claude/
+.claude-code/
+claude-code.json
+.claude-artifacts/
+.claude-cache/
+*.claude-backup
+*.claude-tmp
+
+# Claude Code session files
+.claude-session/
+.claude-history/
+
+# Claude Code configuration
+.clauderc
+.claude-config.json
+claude.config.js
+claude.config.json
+
+# Claude Code temporary files
+*.claude.tmp
+*.claude.swp
+.claude-temp/
+
+# IDE and editor files (often used with Claude Code)
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Node.js (if using with Claude Code)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python (if using with Claude Code)
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+.env
+
+# Logs
+logs/
+*.log
+
+# OS files
+Thumbs.db
+Desktop.ini
