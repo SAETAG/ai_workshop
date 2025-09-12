@@ -120,4 +120,15 @@ ChatGPT、Gemini、画像生成AI、スライド自動生成ツール…。
 
 ---
 
+## 👥 Credits
+
+### 資料作成
+
+本ワークショップ資料は以下のメンバーによる共同制作です：
+
+- **[SAETAG](https://github.com/SAETAG)** - メイン執筆・構成（約80%）
+- **[dmasubuchi](https://github.com/dmasubuchi) / Matthew (Papukaija LLC)** - プロンプトインタプリター開発・補足資料・編集協力
+
+---
+
 **Happy AI Learning! 🤖✨**
