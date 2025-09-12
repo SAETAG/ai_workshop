@@ -4,7 +4,6 @@
 
 | リンク | 内容 |
 |:---|:---|
-| **[Teams会議（コメント＆QA）](https://teams.microsoft.com/meet/4321611469814?p=MDmuZ4eGS6Vb8Fl7YG)** | リアルタイムでの質問・コメント |
 | **[オープニング・まじん式スライド](https://docs.google.com/presentation/d/1vhWLwUvGhrfld5Goark1sAdYGwfdeUNWsjDCpsA8B2M/edit?usp=sharing)** | 講義用プレゼンテーション |
 | **[メイン資料（GitHub）](https://github.com/SAETAG/ai_workshop)** | 本リポジトリ |
 
