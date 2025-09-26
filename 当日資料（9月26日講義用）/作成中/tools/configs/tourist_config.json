@@ -1,0 +1,122 @@
+{
+  "name": "観光客データ",
+  "description": "佐賀県観光客の行動と満足度データ",
+  "output_file": "tourists_data.csv",
+  "seed": null,
+  "columns": [
+    {
+      "name": "visit_date",
+      "type": "date",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "format": "%Y-%m-%d"
+    },
+    {
+      "name": "tourist_origin",
+      "type": "choice",
+      "choices": {
+        "東京都": 0.15,
+        "大阪府": 0.10,
+        "福岡県": 0.25,
+        "長崎県": 0.15,
+        "熊本県": 0.10,
+        "韓国": 0.08,
+        "台湾": 0.07,
+        "中国": 0.05,
+        "その他国内": 0.05
+      }
+    },
+    {
+      "name": "age_group",
+      "type": "choice",
+      "choices": {
+        "20-29": 0.20,
+        "30-39": 0.25,
+        "40-49": 0.20,
+        "50-59": 0.20,
+        "60+": 0.15
+      }
+    },
+    {
+      "name": "group_size",
+      "type": "integer",
+      "min": 1,
+      "max": 8,
+      "distribution": "normal",
+      "mean": 2.5,
+      "std": 1.5
+    },
+    {
+      "name": "visited_spots",
+      "type": "text",
+      "templates": [
+        "{spot1}・{spot2}",
+        "{spot1}・{spot2}・{spot3}",
+        "{spot1}"
+      ],
+      "replacements": {
+        "spot1": ["有田町", "嬉野温泉", "吉野ヶ里遺跡", "唐津城", "武雄温泉"],
+        "spot2": ["佐賀城", "祐徳稲荷神社", "虹の松原", "呼子朝市"],
+        "spot3": ["御船山楽園", "佐賀バルーンミュージアム", "肥前夢街道"]
+      }
+    },
+    {
+      "name": "satisfaction_score",
+      "type": "integer",
+      "min": 1,
+      "max": 10,
+      "distribution": "normal",
+      "mean": 7.5,
+      "std": 1.5
+    },
+    {
+      "name": "spending_amount",
+      "type": "integer",
+      "min": 5000,
+      "max": 100000,
+      "distribution": "normal",
+      "mean": 30000,
+      "std": 15000
+    },
+    {
+      "name": "stay_duration",
+      "type": "integer",
+      "min": 1,
+      "max": 7,
+      "distribution": "exponential",
+      "scale": 1.5
+    }
+  ],
+  "correlations": [
+    {
+      "source": "tourist_origin",
+      "target": "stay_duration",
+      "rules": {
+        "福岡県": {"min": 1, "max": 2, "mean": 1.2},
+        "長崎県": {"min": 1, "max": 2, "mean": 1.3},
+        "東京都": {"min": 2, "max": 5, "mean": 2.8},
+        "韓国": {"min": 2, "max": 4, "mean": 2.5},
+        "台湾": {"min": 3, "max": 5, "mean": 3.5}
+      }
+    },
+    {
+      "source": "group_size",
+      "target": "spending_amount",
+      "rules": {
+        "1": {"min": 5000, "max": 30000, "mean": 15000},
+        "2": {"min": 15000, "max": 50000, "mean": 30000},
+        "3": {"min": 25000, "max": 70000, "mean": 45000},
+        "4": {"min": 35000, "max": 90000, "mean": 60000}
+      }
+    },
+    {
+      "source": "stay_duration",
+      "target": "satisfaction_score",
+      "rules": {
+        "1": {"min": 5, "max": 8, "mean": 6.5},
+        "2": {"min": 6, "max": 9, "mean": 7.5},
+        "3": {"min": 7, "max": 10, "mean": 8.5}
+      }
+    }
+  ]
+}

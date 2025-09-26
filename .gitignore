@@ -52,3 +52,6 @@ logs/
 # OS files
 Thumbs.db
 Desktop.ini
+
+# Project specific files
+めも.txt

@@ -1,0 +1,104 @@
+{
+  "name": "売上データ",
+  "description": "日次売上トランザクションデータ",
+  "output_file": "sales_data.csv",
+  "seed": null,
+  "columns": [
+    {
+      "name": "date",
+      "type": "date",
+      "start": "2024-01-01",
+      "end": "2024-03-31",
+      "format": "%Y-%m-%d"
+    },
+    {
+      "name": "product_name",
+      "type": "choice",
+      "choices": [
+        "有田焼茶碗セット",
+        "有田焼マグカップ",
+        "嬉野茶ギフトセット",
+        "嬉野茶100g",
+        "小城羊羹詰め合わせ",
+        "小城羊羹5本入",
+        "竹崎カニ（大）",
+        "竹崎カニ（中）"
+      ]
+    },
+    {
+      "name": "quantity",
+      "type": "integer",
+      "min": 1,
+      "max": 10,
+      "distribution": "exponential",
+      "scale": 2
+    },
+    {
+      "name": "unit_price",
+      "type": "integer",
+      "min": 1000,
+      "max": 15000
+    },
+    {
+      "name": "total_amount",
+      "type": "calculated",
+      "formula": "quantity * unit_price"
+    },
+    {
+      "name": "store_location",
+      "type": "choice",
+      "choices": {
+        "佐賀市": 0.35,
+        "唐津市": 0.25,
+        "鳥栖市": 0.20,
+        "武雄市": 0.10,
+        "伊万里市": 0.10
+      }
+    },
+    {
+      "name": "customer_age_group",
+      "type": "choice",
+      "choices": {
+        "20代": 0.15,
+        "30代": 0.20,
+        "40代": 0.25,
+        "50代": 0.25,
+        "60代以上": 0.15
+      }
+    },
+    {
+      "name": "payment_method",
+      "type": "choice",
+      "choices": {
+        "現金": 0.30,
+        "クレジット": 0.45,
+        "電子マネー": 0.20,
+        "QRコード": 0.05
+      }
+    }
+  ],
+  "correlations": [
+    {
+      "source": "product_name",
+      "target": "unit_price",
+      "rules": {
+        "有田焼茶碗セット": {"min": 5000, "max": 15000},
+        "有田焼マグカップ": {"min": 3000, "max": 8000},
+        "嬉野茶ギフトセット": {"min": 3000, "max": 8000},
+        "嬉野茶100g": {"min": 1000, "max": 3000},
+        "小城羊羹詰め合わせ": {"min": 2000, "max": 5000},
+        "小城羊羹5本入": {"min": 1000, "max": 2500},
+        "竹崎カニ（大）": {"min": 8000, "max": 15000},
+        "竹崎カニ（中）": {"min": 5000, "max": 10000}
+      }
+    },
+    {
+      "source": "customer_age_group",
+      "target": "payment_method",
+      "rules": {
+        "20代": {"choices": {"現金": 0.20, "クレジット": 0.30, "電子マネー": 0.40, "QRコード": 0.10}},
+        "60代以上": {"choices": {"現金": 0.60, "クレジット": 0.35, "電子マネー": 0.05, "QRコード": 0.00}}
+      }
+    }
+  ]
+}

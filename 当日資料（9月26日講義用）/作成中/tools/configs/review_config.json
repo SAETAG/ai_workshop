@@ -1,0 +1,74 @@
+{
+  "name": "顧客レビューデータ",
+  "description": "佐賀県特産品のレビューデータ",
+  "output_file": "reviews.csv",
+  "seed": null,
+  "columns": [
+    {
+      "name": "product_name",
+      "type": "choice",
+      "choices": {
+        "嬉野茶": 0.35,
+        "小城羊羹": 0.35,
+        "竹崎カニ": 0.30
+      }
+    },
+    {
+      "name": "review_text",
+      "type": "text",
+      "templates": [
+        "{quality}で{emotion}。{feature}が{evaluation}。",
+        "{feature}が{evaluation}、{emotion}です。{recommendation}。",
+        "{first_impression}。{detail}が{evaluation}です。",
+        "{usage}に{evaluation}。{quality}で{emotion}。",
+        "{comparison}より{evaluation}。{feature}が素晴らしい。"
+      ],
+      "replacements": {
+        "quality": ["とても良い品質", "期待以上の出来", "素晴らしい仕上がり", "普通の品質", "少し期待外れ"],
+        "emotion": ["大満足です", "嬉しいです", "感動しました", "普通でした", "残念でした"],
+        "feature": ["香り", "味", "食感", "見た目", "パッケージ", "価格"],
+        "evaluation": ["最高です", "素晴らしいです", "良いです", "普通です", "イマイチです"],
+        "recommendation": ["また購入したいです", "友人にも勧めます", "リピート確定", "検討中です"],
+        "first_impression": ["初めて購入しました", "期待して購入", "評判を聞いて購入"],
+        "detail": ["味の深み", "香りの豊かさ", "食感の良さ", "見た目の美しさ"],
+        "usage": ["朝食", "お茶請け", "贈り物", "自分用", "来客用"],
+        "comparison": ["他の商品", "以前購入したもの", "他店の商品"]
+      }
+    },
+    {
+      "name": "rating",
+      "type": "integer",
+      "min": 1,
+      "max": 5,
+      "distribution": "normal",
+      "mean": 3.8,
+      "std": 1.2
+    }
+  ],
+  "correlations": [
+    {
+      "source": "rating",
+      "target": "review_text",
+      "rules": {
+        "5": {
+          "templates": [
+            "素晴らしい品質で大満足です。{feature}が最高で、また購入したいです。",
+            "期待以上の出来栄えで感動しました。{feature}が特に素晴らしく、友人にも勧めます。"
+          ],
+          "replacements": {
+            "feature": ["香り", "味", "品質", "パッケージ"]
+          }
+        },
+        "1": {
+          "templates": [
+            "期待外れでした。{problem}で残念です。",
+            "品質に問題があり、{problem}でした。改善を希望します。"
+          ],
+          "replacements": {
+            "problem": ["味が薄い", "香りがない", "鮮度が悪い", "価格が高すぎる"]
+          }
+        }
+      }
+    }
+  ]
+}
